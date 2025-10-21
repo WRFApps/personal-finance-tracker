@@ -95,8 +95,9 @@ import CreditCardsScreen from './components/CreditCardsScreen.tsx';
 import CreditCardFormScreen from './components/CreditCardFormScreen.tsx';
 import BankAccountsScreen from './components/BankAccountsScreen.tsx';
 import BankAccountFormScreen from './components/BankAccountFormScreen.tsx';
-import LiabilitiesScreen from './components/NonCurrentLiabilitiesScreen.tsx'; 
-import LongTermLiabilityFormScreen from './components/NonCurrentLiabilityFormScreen.tsx'; // Corrected import path
+import LiabilitiesScreen from './components/LiabilitiesScreen.tsx';
+import NonCurrentLiabilitiesScreen from './components/NonCurrentLiabilitiesScreen.tsx';
+import LongTermLiabilityFormScreen from './components/NonCurrentLiabilityFormScreen.tsx';
 import ShortTermLiabilityFormScreen from './components/ShortTermLiabilityFormScreen.tsx';
 import NonCurrentAssetsScreen from './components/NonCurrentAssetsScreen.tsx';
 import NonCurrentAssetFormScreen from './components/NonCurrentAssetFormScreen.tsx';
@@ -105,6 +106,7 @@ import Input from './components/ui/Input.tsx';
 import GlobalSearchModal from './components/GlobalSearchModal.tsx';
 import ReceiptScannerModal from './components/ReceiptScannerModal.tsx';
 import DashboardCustomizationModal from './components/DashboardCustomizationModal.tsx';
+
 
 
 // New Screen Imports
