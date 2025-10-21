@@ -74,7 +74,7 @@ const TransactionFormScreen: React.FC = () => {
             setCategoryId(transactionToEdit.categoryId || '');
             setSplits([{ id: Date.now().toString(), categoryId: '', amount: 0, description: '' }]);
         }
-      } else { context.notifyError("Transaction not found!"); navigate('/transactions'); }
+      } else { context.notifyError("Transaction not found!"); navigate('/');}
     } else if (initialTypeFromState && !initialScannedData) { setType(initialTypeFromState); }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, isEditing, context?.transactions, navigate, initialTypeFromState, initialScannedData]);
