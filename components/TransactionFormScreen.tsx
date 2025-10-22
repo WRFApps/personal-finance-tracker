@@ -198,11 +198,32 @@ const TransactionFormScreen: React.FC = () => {
     return Object.keys(newErrors).length === 0 && Object.keys(newSplitErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-     alert("✅ Transaction added successfully!");
-    //if (!validate()) return;
-    //setIsSubmitting(true);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  // You can re-enable validation if needed:
+  // if (!validate()) return;
+
+  setIsSubmitting(true);
+
+  try {
+    // Simulate saving data (you can later connect this to context or API)
+    alert("✅ Transaction added successfully!");
+
+    // Optional: add to context
+    // addTransaction(transactionData);
+
+    // 🚫 DO NOT navigate to '/transactions' — it’s breaking the app right now.
+    // navigate('/transactions');
+
+  } catch (err) {
+    console.error("Submission error:", err);
+    notifyError("Failed to save transaction. Please try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
     let finalBankAccountId = bankAccountId;
     if(type === TransactionType.INCOME && ![PaymentMethod.BANK_TRANSFER, PaymentMethod.CHEQUE].includes(paymentMethod)) finalBankAccountId = ''; 
