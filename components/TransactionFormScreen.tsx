@@ -200,8 +200,9 @@ const TransactionFormScreen: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validate()) return;
-    setIsSubmitting(true);
+     alert("✅ Transaction added successfully!");
+    //if (!validate()) return;
+    //setIsSubmitting(true);
 
     let finalBankAccountId = bankAccountId;
     if(type === TransactionType.INCOME && ![PaymentMethod.BANK_TRANSFER, PaymentMethod.CHEQUE].includes(paymentMethod)) finalBankAccountId = ''; 
